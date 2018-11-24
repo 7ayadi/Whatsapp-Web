@@ -9,6 +9,16 @@
  var commands = ["help", "text: hello world",
 		 "end", "text: goodbye!"]; 
 
+/////// 	Useful commands (NEEDED!)
+
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
 
 /////// 	Defining functions here. 
 ///////			DONT TOUCH THIS!
@@ -45,4 +55,5 @@ function listen(){
 }
 
 clear();
-console.log("all set!");
+sleep(3000);
+console.log("all set! start the bot with listen();");
