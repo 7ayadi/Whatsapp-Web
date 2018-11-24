@@ -9,7 +9,7 @@
  var prefix = "!";
  var commands = ["help", "text: hello world",
 		 "Ich komm jetzt", "text: goodbye!"]; 
-var actions = ["text", "sendMessage(param)"];
+var actions = ["text", "sendMessage"];
 
 
 /////// 	Defining functions here. 
@@ -17,6 +17,7 @@ var actions = ["text", "sendMessage(param)"];
 
 function isEven(n) {return n % 2 == 0;}
 function sendMessage(text){
+   messageBox = document.querySelectorAll("[contenteditable='true']")[0];
   //insert the text
   document.getElementsByClassName("_2S1VP")[0].innerHTML = text;
     document.getElementsByClassName("_2S1VP")[0].innerTEXT = text;
@@ -28,13 +29,14 @@ function sendMessage(text){
     $("._35EW6").click();
 }
 
-function getCommandAction(action){
+function getCommandAction(action, parameters){
 	action = action.slice(0,-1);
 	console.log("the action to go is: " + action); 
 	var actionINT = 0;
 	for(actionINT = 0; actionINT < actions.length; actionINT++){
 		if(isEven(actionINT)){
 			console.log("running em " + actions[actionINT]);
+			window[actions[actionINT+1]](parameters);
 		}
 	}
 }	
@@ -64,7 +66,7 @@ function listen(){
 					  var words = commands[(runnerINT + 1)].split(" ");
 					  firstWords.push(words[0]);
 					}console.log(firstWords[0]);
-					getCommandAction(firstWords[0]);
+					getCommandAction(firstWords[0], commands[runnerINT+1].split(' ').pop());
 				}
 			}
 		}
