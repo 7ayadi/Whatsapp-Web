@@ -44,9 +44,13 @@ function listen(){
 		var runnerINT = 0;
 		for(runnerINT = 0; runnerINT < commands.length; runnerINT++){
 			if(isEven(runnerINT)){
-				console.log("running EVEN command at runnerINT: " + runnerINT + " and command: " + commands[runnerINT]);
 				if(lastMessage() == commands[runnerINT]){
-					console.log("Command detected, and it is : " + commands[runnerINT]);
+					console.log("Command detected, and it is : " + commands[runnerINT] + "!");
+					var firstWords = [];
+					for (var i=0;i<commands.length;i++){
+					  var words = commands[runnerINT].split(" ");
+					  firstWords.push(words[0]);
+					}console.log(firstWords[0]);
 				}
 			}
 		}
