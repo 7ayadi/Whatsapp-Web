@@ -12,6 +12,6 @@ function sendMessage(text){
 
 function lastMessage(){
   var lastmsgctn = document.getElementsByClassName("_3zb-j").length - 1
-  var lastMSG document.getElementsByClassName("_3zb-j")[lastmsgctn].textContent
+  var lastMSG = document.getElementsByClassName("_3zb-j")[lastmsgctn].textContent
   return lastMSG
 }
