@@ -45,6 +45,9 @@ function listen(){
 		for(runnerINT = 0; runnerINT < commands.length; runnerINT++){
 			if(isEven(runnerINT)){
 				console.log("running EVEN command at runnerINT: " + runnerINT + " and command: " + commands[runnerINT]);
+				if(lastMessage() == commands[runnerINT]){
+					console.log("Command detected, and it is : " + commands[runnerINT]);
+				}
 			}
 		}
 	}, 1000);
