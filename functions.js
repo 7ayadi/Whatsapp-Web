@@ -42,8 +42,7 @@ function listen(){
 	setInterval(function(){
 		console.log("Scanning for "+(commands.length / 2)+" commands...");
 		var runnerINT = 0;
-		for(runnerINT < commands.length){
-			runnerINT++;
+		for(runnerINT = 0; runnerINT < commands.length; runnerINT++){
 			if(isEven(runnerINT)){
 				console.log("running EVEN command at runnerINT: " + runnerINT);
 			}
