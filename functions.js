@@ -32,7 +32,7 @@ function lastMessage(){
 }
 
 function checkForCommands(){
-	length = commands.length;
+	length = commands.length / 2;
 	console.log(length);
 }
 ///////			The bot listener goes here
