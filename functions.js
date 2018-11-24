@@ -11,6 +11,8 @@
 		 "Ich komm jetzt", "text: goodbye! lol"]; 
 var actions = ["text", "sendMessage",
 	       "respond", "respond"];
+var emotes = ["yes", "👍",
+	      "no", "👎"];
 
 
 /////// 	Defining functions here. 
