@@ -67,7 +67,7 @@ function listen(){
 					  var words = commands[(runnerINT + 1)].split(" ");
 					  firstWords.push(words[0]);
 					}console.log(firstWords[0]);
-					getCommandAction(firstWords[0], commands[runnerINT+1].substr(commands[runnerINT+1].indexOf(" ") + 1););
+					getCommandAction(firstWords[0], commands[runnerINT+1].substr(commands[runnerINT+1].indexOf(" ") + 1));
 				}
 			}
 		}
