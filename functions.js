@@ -4,11 +4,16 @@
 	var commands =	["help", "text: this is a response"];
 	
 */
-
+var helpMessage = '[*+*]-----------------[*+*]\n' +
+ 		   ' |       *Crysis-Bot*       |\n' + 
+			 '[*+*]-----------------[*+*]\n' +
+ 		   ' |            help              |\n' +
+		   ' |           credits           |\n' +
+		   '[*+*]-----------------[*+*]'
 
  var prefix = "!";
- var commands = ["help", "text: hello world",
-		 "credits", "text: This whatsapp bot was made by iSn0w"]; 
+ var commands = ["help", "text: "+helpMessage,
+		 "credits", "text: "+helpMessage]; 
 var actions = ["text", "sendMessage",
 	       "respond", "respond"];
 var emotes = ["yes", "👍",
@@ -17,7 +22,7 @@ var emotes = ["yes", "👍",
 
 /////// 	Defining functions here. 
 ///////			DONT TOUCH THIS!
-
+function pad(width, string, padding) { return (width <= string.length) ? string : pad(width, padding + string, padding)}
 function isEven(n) {return n % 2 == 0;}
 function sendMessage(text){
    messageBox = document.querySelectorAll("[contenteditable='true']")[0];
@@ -32,13 +37,18 @@ function sendMessage(text){
     $("._35EW6").click();
 }
 
+function drawMenu(header, options, size){
+	var MenuOut =  '[*+*]-----------------[*+*]\n' +
+		       ' |       *Crysis-Bot*       |\n';
+	return MenuOut;
+}
+
+
 function getCommandAction(action, parameters){
 	action = action.slice(0,-1);
-	console.log("the action to go is: " + action); 
 	var actionINT = 0;
 	for(actionINT = 0; actionINT < actions.length; actionINT++){
 		if(isEven(actionINT)){
-			console.log("running em " + actions[actionINT]);
 			window[actions[actionINT+1]](parameters);
 		}
 	}
