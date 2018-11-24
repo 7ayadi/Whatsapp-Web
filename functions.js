@@ -13,6 +13,7 @@
 /////// 	Defining functions here. 
 ///////			DONT TOUCH THIS!
 
+function isEven(n) {return n % 2 == 0;}
 function sendMessage(text){
   //insert the text
   document.getElementsByClassName("_2S1VP")[0].innerHTML = text;
@@ -40,6 +41,13 @@ function checkForCommands(){
 function listen(){
 	setInterval(function(){
 		console.log("Scanning for "+(commands.length / 2)+" commands...");
+		var runnerINT = 0;
+		for(runnerINT < commands.length){
+			runnerINT++;
+			if(isEven(runnerINT)){
+				console.log("running EVEN command at runnerINT: " + runnerINT);
+			}
+		}
 	}, 1000);
 }
 
