@@ -1,3 +1,18 @@
+// functions go here in that scheme:
+/*
+
+	var commands =	["help", "text: this is a response"];
+	
+*/
+
+ var prefix = "!";
+ var commands = ["help", "text: hello world",
+		 "end", "text: goodbye!"]; 
+
+
+/////// 	Defining functions here. 
+///////			DONT TOUCH THIS!
+
 function sendMessage(text){
   //insert the text
   document.getElementsByClassName("_2S1VP")[0].innerHTML = text;
@@ -14,4 +29,12 @@ function lastMessage(){
   var lastmsgctn = document.getElementsByClassName("_3zb-j").length - 1
   var lastMSG = document.getElementsByClassName("_3zb-j")[lastmsgctn].textContent
   return lastMSG
+}
+
+///////			The bot listener goes here
+
+function listen(){
+	setInterval(function(){
+	  console.log("scanning for commands...");
+	}, 1000);
 }
