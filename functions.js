@@ -38,7 +38,7 @@ function checkForCommands(){
 ///////			The bot listener goes here
 
 function listen(){
-	console.log("Scanning for " + (commands.length / 2) + "commands...");
+	console.log("Scanning for "+(commands.length / 2)+" commands...");
 	setInterval(function(){
 	  console.log("scanning for commands...");
 	}, 1000);
