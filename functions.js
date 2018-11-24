@@ -22,24 +22,31 @@ var emotes = ["yes", "👍",
 
 /////// 	Defining functions here. 
 ///////			DONT TOUCH THIS!
-function pad(width, string, padding) { return (width <= string.length) ? string : pad(width, padding + string, padding)}
+function pad(widthleft, string, padding){return (widthleft <= string.length) ? string : pad(widthleft, padding + string, padding)}
 function isEven(n) {return n % 2 == 0;}
 function sendMessage(text){
    messageBox = document.querySelectorAll("[contenteditable='true']")[0];
-  //insert the text
   document.getElementsByClassName("_2S1VP")[0].innerHTML = text;
     document.getElementsByClassName("_2S1VP")[0].innerTEXT = text;
-    // refresh to apply change
     event = document.createEvent("UIEvents");
 		event.initUIEvent("input", true, true, window, 1);
     messageBox.dispatchEvent(event);
-    // click the send button
     $("._35EW6").click();
 }
 
 function drawMenu(header, options, size){
+	options.map(function(el) { 
+	  el = '*' + el + '*'; 
+	});
+	header = "*"+header+"*";
 	var MenuOut =  '[*+*]-----------------[*+*]\n' +
-		       ' |       *Crysis-Bot*       |\n';
+		       '|'+header.padStart(16, ' ').padEnd(30, ' ')+'|\n' +
+	    	       '[*+*]-----------------[*+*]\n';
+			options.map(function(el) { 
+				el = '*' + el + '*';
+				MenuOut += '|'+(el).padStart(16, ' ').padEnd(30, ' ')+'|\n'
+			});
+			MenuOut += '[*+*]-----------------[*+*]\n';
 	return MenuOut;
 }
 
