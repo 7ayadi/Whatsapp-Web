@@ -7,7 +7,7 @@
 
  var prefix = "!";
  var commands = ["help", "text: hello world",
-		 "end", "text: goodbye!"]; 
+		 "Ich komm jetzt", "text: goodbye!"]; 
 
 
 /////// 	Defining functions here. 
