@@ -31,10 +31,15 @@ function lastMessage(){
   return lastMSG
 }
 
+function checkForCommands(){
+	length = commands.length;
+	console.log(length);
+}
 ///////			The bot listener goes here
 
 function listen(){
 	setInterval(function(){
+		
 	  console.log("scanning for commands...");
 	}, 1000);
 }
