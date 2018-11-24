@@ -8,7 +8,7 @@
 
  var prefix = "!";
  var commands = ["help", "text: hello world",
-		 "Ich komm jetzt", "text: goodbye! lol"]; 
+		 "credits", "text: This whatsapp bot was made by iSn0w"]; 
 var actions = ["text", "sendMessage",
 	       "respond", "respond"];
 var emotes = ["yes", "👍",
