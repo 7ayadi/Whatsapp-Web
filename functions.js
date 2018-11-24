@@ -26,6 +26,10 @@ function sendMessage(text){
     $("._35EW6").click();
 }
 
+function getCommandAction(action){
+	console.log("the action to go is: " + action); 
+}	
+
 function lastMessage(){
   var lastmsgctn = document.getElementsByClassName("_3zb-j").length - 1
   var lastMSG = document.getElementsByClassName("_3zb-j")[lastmsgctn].textContent
@@ -51,6 +55,7 @@ function listen(){
 					  var words = commands[(runnerINT + 1)].split(" ");
 					  firstWords.push(words[0]);
 					}console.log(firstWords[0]);
+					getCommandAction(firstWords[0]);
 				}
 			}
 		}
