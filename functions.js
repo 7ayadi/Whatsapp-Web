@@ -48,7 +48,7 @@ function listen(){
 					console.log("Command detected, and it is : " + commands[runnerINT] + "!");
 					var firstWords = [];
 					for (var i=0;i<commands.length;i++){
-					  var words = commands[runnerINT].split(" ");
+					  var words = commands[(runnerINT + 1)].split(" ");
 					  firstWords.push(words[0]);
 					}console.log(firstWords[0]);
 				}
