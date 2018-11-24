@@ -5,9 +5,11 @@
 	
 */
 
+
  var prefix = "!";
  var commands = ["help", "text: hello world",
 		 "Ich komm jetzt", "text: goodbye!"]; 
+var actions = ["text", "sendMessage(param)"];
 
 
 /////// 	Defining functions here. 
@@ -27,7 +29,14 @@ function sendMessage(text){
 }
 
 function getCommandAction(action){
+	action = action.slice(0,-1);
 	console.log("the action to go is: " + action); 
+	var actionINT = 0;
+	for(actionINT = 0; actionINT < actions.length; actionINT++){
+		if(isEven(actionINT)){
+			console.log("running em " + actions[actionINT]);
+		}
+	}
 }	
 
 function lastMessage(){
