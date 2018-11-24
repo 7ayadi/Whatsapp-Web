@@ -38,3 +38,6 @@ function listen(){
 	  console.log("scanning for commands...");
 	}, 1000);
 }
+
+clear();
+console.log("all set!");
