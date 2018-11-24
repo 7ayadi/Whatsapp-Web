@@ -8,8 +8,9 @@
 
  var prefix = "!";
  var commands = ["help", "text: hello world",
-		 "Ich komm jetzt", "text: goodbye!"]; 
-var actions = ["text", "sendMessage"];
+		 "Ich komm jetzt", "text: goodbye! lol"]; 
+var actions = ["text", "sendMessage",
+	       "respond", "respond"];
 
 
 /////// 	Defining functions here. 
